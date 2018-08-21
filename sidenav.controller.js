@@ -2,12 +2,17 @@
 
     var app = angular.module('MyApp');
 
-    app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+    app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log, $location) {
         $scope.toggleLeft = buildDelayedToggler('left');
         $scope.toggleRight = buildToggler('right');
         $scope.isOpenRight = function(){
           return $mdSidenav('right').isOpen();
         };
+
+        $scope.go = function (path) {
+          $location.path(path);
+          
+      };
     
         /**
          * Supplies a function that will continue to operate until the

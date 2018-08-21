@@ -5,7 +5,8 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="/node_modules/angular/angular.js"></script> 
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/angular-route/angular-route.js"></script>
         <script src="/node_modules/angular-aria/angular-aria.js"></script> 
         <script src="/node_modules/angular-animate/angular-animate.js"></script> 
         <script src="/node_modules/angular-messages/angular-messages.js"></script> 
@@ -17,11 +18,11 @@
     </head>
 
     <body ng-app="MyApp">
-            <div ng-controller="AppCtrl" layout="column" style="height:100%;" ng-cloak>
+            <div ng-controller="AppCtrl" layout="column" style="height:100%;">
 
                     <section layout="row" flex>
                   
-                      <md-sidenav ng-cloak
+                      <md-sidenav
                           class="md-sidenav-left"
                           md-component-id="left"
                           md-is-locked-open="$mdMedia('gt-md')"
@@ -30,7 +31,7 @@
                         <md-toolbar>
                             <div class="md-toolbar-tools">
                                 <h2 flex md-truncate>Current Projects</h2>
-                                <md-button class="md-icon-button">
+                                <md-button class="md-icon-button" ng-click="go('/'); toggleLeft()">
                                   <i class="material-icons">home</i>
                                 </md-button>
                                 <md-button class="md-icon-button" hide-gt-md aria-label="Settings"
@@ -42,17 +43,7 @@
                     
                         <md-content ng-controller="LeftCtrl">
                           <div layout-padding layout="column">
-                            <md-card>
-                                <md-card-actions layout="row" layout-align="space-between center">
-                                  SLAM Drone using Image Processing
-                                    <md-card-icon-actions>
-                                      <md-button class="md-icon-button" aria-label="Share">
-                                          <i class="material-icons">send</i>
-                                      </md-button>
-                                    </md-card-icon-actions>
-                                  </md-card-actions>
-                            </md-card>
-                            <md-card>
+                            <md-card ng-click="go('/rbgleds'); toggleLeft()" style="cursor:pointer;">
                                 <md-card-actions layout="row" layout-align="space-between center">
                                   Addressable High-Power RGBLEDs
                                     <md-card-icon-actions>
@@ -62,7 +53,7 @@
                                     </md-card-icon-actions>
                                   </md-card-actions>
                             </md-card>
-                            <md-card>
+                            <md-card ng-click="go('/web'); toggleLeft()" style="cursor:pointer;">
                                 <md-card-actions layout="row" layout-align="space-between center">
                                   Front-End Development using Modern Frameworks
                                     <md-card-icon-actions>
@@ -72,7 +63,7 @@
                                     </md-card-icon-actions>
                                   </md-card-actions>
                             </md-card>
-                            <md-card>
+                            <md-card ng-click="go('/iot'); toggleLeft()" style="cursor:pointer;">
                                 <md-card-actions layout="row" layout-align="space-between center">
                                   IoT: Remote Power Switch using ESP Microprocessor
                                     <md-card-icon-actions>
@@ -82,7 +73,7 @@
                                     </md-card-icon-actions>
                                   </md-card-actions>
                             </md-card>
-                            <md-card>
+                            <md-card ng-click="go('/clms'); toggleLeft()" style="cursor:pointer;">
                                 <md-card-actions layout="row" layout-align="space-between center">
                                   Call Log Management Center using PHP & MySQL
                                     <md-card-icon-actions>
@@ -100,7 +91,17 @@
                               </div>
                         </md-toolbar>
                         <div layout-padding layout="column">
-                            <md-card>
+                          <md-card ng-click="go('/slam'); toggleLeft()" style="cursor:pointer;">
+                              <md-card-actions layout="row" layout-align="space-between center">
+                                SLAM Drone using Image Processing
+                                  <md-card-icon-actions>
+                                    <md-button class="md-icon-button" aria-label="Share">
+                                        <i class="material-icons">send</i>
+                                    </md-button>
+                                  </md-card-icon-actions>
+                                </md-card-actions>
+                          </md-card>
+                            <md-card ng-click="go('/wildwest'); toggleLeft()" style="cursor:pointer;">
                                 <md-card-actions layout="row" layout-align="space-between center">
                                   Wild West Shootout Game using PIC Microcontroller and LED Strip
                                     <md-card-icon-actions>
@@ -110,7 +111,7 @@
                                     </md-card-icon-actions>
                                   </md-card-actions>
                             </md-card>
-                            <md-card>
+                            <md-card ng-click="go('/bluetooth'); toggleLeft()" style="cursor:pointer;">
                                 <md-card-actions layout="row" layout-align="space-between center">
                                   DC Isolated Bluetooth Audio Adapter
                                     <md-card-icon-actions>
