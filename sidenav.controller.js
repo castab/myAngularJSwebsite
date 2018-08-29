@@ -12,7 +12,7 @@
         $scope.go = function (path) {
           $location.path(path);
           
-      };
+        };
     
         /**
          * Supplies a function that will continue to operate until the
@@ -65,7 +65,6 @@
             .then(function () {
               $log.debug("close LEFT is done");
             });
-    
         };
       })
       .controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {

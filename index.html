@@ -15,152 +15,150 @@
         <script src="myApp.js"></script>
         <script src="index.controller.js"></script>
         <script src="sidenav.controller.js"></script>
+        <script src="dialog.controller.js"></script>
     </head>
 
-    <body ng-app="MyApp">
-            <div ng-controller="AppCtrl" layout="column" style="height:100%;">
+  <body ng-app="MyApp">
+    <div ng-controller="AppCtrl" layout="column" style="height:100%;">
+      <section layout="row" flex>
+        <md-sidenav
+            class="md-sidenav-left"
+            md-component-id="left"
+            md-is-locked-open="$mdMedia('gt-md')"
+            md-whiteframe="4">
+      
+          <md-toolbar>
+              <div class="md-toolbar-tools">
+                  <h2 flex md-truncate>Current Projects</h2>
+                  <md-button class="md-icon-button" ng-click="go('/'); toggleLeft()">
+                    <i class="material-icons">home</i>
+                  </md-button>
+                  <md-button class="md-icon-button" hide-gt-md aria-label="Settings"
+                  ng-click="toggleLeft()">
+                    <i class="material-icons">clear</i>
+                  </md-button>
+                </div>
+          </md-toolbar>
+      
+          <md-content ng-controller="LeftCtrl">
+            <div layout-padding layout="column">
+              <md-card ng-click="go('/rbgleds'); toggleLeft()" style="cursor:pointer;">
+                  <md-card-actions layout="row" layout-align="space-between center">
+                    Addressable High-Power RGBLEDs
+                      <md-card-icon-actions>
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <i class="material-icons">brightness_high</i>
+                        </md-button>
+                      </md-card-icon-actions>
+                    </md-card-actions>
+              </md-card>
+              <md-card ng-click="go('/web'); toggleLeft()" style="cursor:pointer;">
+                  <md-card-actions layout="row" layout-align="space-between center">
+                    Front-End Development using Modern Frameworks
+                      <md-card-icon-actions>
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <i class="material-icons">web</i>
+                        </md-button>
+                      </md-card-icon-actions>
+                    </md-card-actions>
+              </md-card>
+              <md-card ng-click="go('/iot'); toggleLeft()" style="cursor:pointer;">
+                  <md-card-actions layout="row" layout-align="space-between center">
+                    IoT: Remote Power Switch using ESP Microprocessor
+                      <md-card-icon-actions>
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <i class="material-icons">offline_bolt</i>
+                        </md-button>
+                      </md-card-icon-actions>
+                    </md-card-actions>
+              </md-card>
+              <md-card ng-click="go('/clms'); toggleLeft()" style="cursor:pointer;">
+                  <md-card-actions layout="row" layout-align="space-between center">
+                    Call Log Management Center using PHP & MySQL
+                      <md-card-icon-actions>
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <i class="material-icons">storage</i>
+                        </md-button>
+                      </md-card-icon-actions>
+                    </md-card-actions>
+              </md-card>
+            </div>
+          </md-content>
+          <md-toolbar>
+              <div class="md-toolbar-tools">
+                  <h2 flex md-truncate>Past Projects</h2>
+                </div>
+          </md-toolbar>
+          <div layout-padding layout="column">
+            <md-card ng-click="go('/slam'); toggleLeft()" style="cursor:pointer;">
+                <md-card-actions layout="row" layout-align="space-between center">
+                  SLAM Drone using Image Processing
+                    <md-card-icon-actions>
+                      <md-button class="md-icon-button" aria-label="Share">
+                        <img style="filter:invert(100%)" ng-src="droneSVG.svg">
+                      </md-button>
+                    </md-card-icon-actions>
+                  </md-card-actions>
+            </md-card>
+              <md-card ng-click="go('/wildwest'); toggleLeft()" style="cursor:pointer;">
+                  <md-card-actions layout="row" layout-align="space-between center">
+                    Wild West Shootout Game using PIC Microcontroller and LED Strip
+                      <md-card-icon-actions>
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <i class="material-icons">developer_board</i>
+                        </md-button>
+                      </md-card-icon-actions>
+                    </md-card-actions>
+              </md-card>
+              <md-card ng-click="go('/bluetooth'); toggleLeft()" style="cursor:pointer;">
+                  <md-card-actions layout="row" layout-align="space-between center">
+                    DC Isolated Bluetooth Audio Adapter
+                      <md-card-icon-actions>
+                        <md-button class="md-icon-button">
+                            <i class="material-icons">bluetooth_connected</i>
+                        </md-button>
+                      </md-card-icon-actions>
+                    </md-card-actions>
+              </md-card>
+              </div>
+        </md-sidenav>
 
-                    <section layout="row" flex>
-                  
-                      <md-sidenav
-                          class="md-sidenav-left"
-                          md-component-id="left"
-                          md-is-locked-open="$mdMedia('gt-md')"
-                          md-whiteframe="4">
-                   
-                        <md-toolbar>
-                            <div class="md-toolbar-tools">
-                                <h2 flex md-truncate>Current Projects</h2>
-                                <md-button class="md-icon-button" ng-click="go('/'); toggleLeft()">
-                                  <i class="material-icons">home</i>
-                                </md-button>
-                                <md-button class="md-icon-button" hide-gt-md aria-label="Settings"
-                                ng-click="toggleLeft()">
-                                  <i class="material-icons">clear</i>
-                                </md-button>
-                              </div>
-                        </md-toolbar>
-                    
-                        <md-content ng-controller="LeftCtrl">
-                          <div layout-padding layout="column">
-                            <md-card ng-click="go('/rbgleds'); toggleLeft()" style="cursor:pointer;">
-                                <md-card-actions layout="row" layout-align="space-between center">
-                                  Addressable High-Power RGBLEDs
-                                    <md-card-icon-actions>
-                                      <md-button class="md-icon-button" aria-label="Share">
-                                          <i class="material-icons">brightness_high</i>
-                                      </md-button>
-                                    </md-card-icon-actions>
-                                  </md-card-actions>
-                            </md-card>
-                            <md-card ng-click="go('/web'); toggleLeft()" style="cursor:pointer;">
-                                <md-card-actions layout="row" layout-align="space-between center">
-                                  Front-End Development using Modern Frameworks
-                                    <md-card-icon-actions>
-                                      <md-button class="md-icon-button" aria-label="Share">
-                                          <i class="material-icons">web</i>
-                                      </md-button>
-                                    </md-card-icon-actions>
-                                  </md-card-actions>
-                            </md-card>
-                            <md-card ng-click="go('/iot'); toggleLeft()" style="cursor:pointer;">
-                                <md-card-actions layout="row" layout-align="space-between center">
-                                  IoT: Remote Power Switch using ESP Microprocessor
-                                    <md-card-icon-actions>
-                                      <md-button class="md-icon-button" aria-label="Share">
-                                          <i class="material-icons">offline_bolt</i>
-                                      </md-button>
-                                    </md-card-icon-actions>
-                                  </md-card-actions>
-                            </md-card>
-                            <md-card ng-click="go('/clms'); toggleLeft()" style="cursor:pointer;">
-                                <md-card-actions layout="row" layout-align="space-between center">
-                                  Call Log Management Center using PHP & MySQL
-                                    <md-card-icon-actions>
-                                      <md-button class="md-icon-button" aria-label="Share">
-                                          <i class="material-icons">storage</i>
-                                      </md-button>
-                                    </md-card-icon-actions>
-                                  </md-card-actions>
-                            </md-card>
-                          </div>
-                        </md-content>
-                        <md-toolbar>
-                            <div class="md-toolbar-tools">
-                                <h2 flex md-truncate>Past Projects</h2>
-                              </div>
-                        </md-toolbar>
-                        <div layout-padding layout="column">
-                          <md-card ng-click="go('/slam'); toggleLeft()" style="cursor:pointer;">
-                              <md-card-actions layout="row" layout-align="space-between center">
-                                SLAM Drone using Image Processing
-                                  <md-card-icon-actions>
-                                    <md-button class="md-icon-button" aria-label="Share">
-                                        <i class="material-icons">send</i>
-                                    </md-button>
-                                  </md-card-icon-actions>
-                                </md-card-actions>
-                          </md-card>
-                            <md-card ng-click="go('/wildwest'); toggleLeft()" style="cursor:pointer;">
-                                <md-card-actions layout="row" layout-align="space-between center">
-                                  Wild West Shootout Game using PIC Microcontroller and LED Strip
-                                    <md-card-icon-actions>
-                                      <md-button class="md-icon-button" aria-label="Share">
-                                          <i class="material-icons">developer_board</i>
-                                      </md-button>
-                                    </md-card-icon-actions>
-                                  </md-card-actions>
-                            </md-card>
-                            <md-card ng-click="go('/bluetooth'); toggleLeft()" style="cursor:pointer;">
-                                <md-card-actions layout="row" layout-align="space-between center">
-                                  DC Isolated Bluetooth Audio Adapter
-                                    <md-card-icon-actions>
-                                      <md-button class="md-icon-button">
-                                          <i class="material-icons">bluetooth_connected</i>
-                                      </md-button>
-                                    </md-card-icon-actions>
-                                  </md-card-actions>
-                            </md-card>
-                            </div>
-                      </md-sidenav>
+    
+        <md-content flex layout-padding>
+              <md-toolbar class="md-hue-2">
+                <div class="md-toolbar-tools">
+                  <md-button class="md-icon-button" hide-gt-md aria-label="Settings"
+                  ng-click="toggleLeft()">
+                    <i class="material-icons">view_headline</i>
+                  </md-button>
+                  <h2 flex md-truncate>Brayan J. Castaneda</h2>
+                </div>
+              </md-toolbar>
+    
+              <div class="ng-view"></div> <!-- Page content goes here -->
 
-                  
-                      <md-content flex layout-padding>
+          <div flex></div>
+        </md-content>
+    
+        <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+          <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Sidenav Right</h1>
+          </md-toolbar>
+          <md-content ng-controller="RightCtrl" layout-padding>
+            <form>
+              <md-input-container>
+                <label for="testInput">Test input</label>
+                <input type="text" id="testInput"
+                        ng-model="data" md-autofocus>
+              </md-input-container>
+            </form>
+            <md-button ng-click="close()" class="md-primary">
+              Close Sidenav Right
+            </md-button>
+          </md-content>
+        </md-sidenav>
 
-                            <md-toolbar class="md-hue-2">
-                              <div class="md-toolbar-tools">
-                                <md-button class="md-icon-button" hide-gt-md aria-label="Settings"
-                                ng-click="toggleLeft()">
-                                  <i class="material-icons">view_headline</i>
-                                </md-button>
-                                <h2 flex md-truncate>Brayan J. Castaneda</h2>
-                              </div>
-                            </md-toolbar>
-                  
-                            <div class="ng-view"></div>
-                  
-                        <div flex></div>
-                      </md-content>
-                  
-                      <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
-                  
-                        <md-toolbar class="md-theme-light">
-                          <h1 class="md-toolbar-tools">Sidenav Right</h1>
-                        </md-toolbar>
-                        <md-content ng-controller="RightCtrl" layout-padding>
-                          <form>
-                            <md-input-container>
-                              <label for="testInput">Test input</label>
-                              <input type="text" id="testInput"
-                                     ng-model="data" md-autofocus>
-                            </md-input-container>
-                          </form>
-                          <md-button ng-click="close()" class="md-primary">
-                            Close Sidenav Right
-                          </md-button>
-                        </md-content>
-                      </md-sidenav>
-                    </section>
-                  </div>
-    </body>
+      </section>
+    </div>
+  </body>
 </html>

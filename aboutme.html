@@ -1,0 +1,74 @@
+<div ng-cloak>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom md-selected="vm.selectedTabIndex">
+        <md-tab label="About Me">
+            <md-content class="md-padding">
+            <h3>About Me</h3>
+            <p>I'm currently attending California State University, Fresno in pursuit of my first undergraduate degree in Electrical Engineering. I feel that my strengths are in communication systems and signal processing. I also have passion in Internet of Things, power efficiency, and networked computing.</p>
+            <p>My other hobbies include <u style="cursor:pointer" ng-click="vm.showMusicTab=true;vm.selectedTabIndex=2">music</u>, stage lighting and sound, diy electronics, shortwave radio, and drones.</p>
+            <h3>Why Engineering?</h3>
+            <p>I've worked retail for most of my working life and have come to find it unfulfilling. Yeah, it paid the bills, but offered no real goal for me. I'm not talking about rising through management - I'm talking about growing intellectually and consciously. I enjoyed the company of my co-workers but after some time, the work was just repetitive and always came to the bottom line. Don't get me wrong, there should always be a bottom line, but I knew that I had it in me to become something more. I had my hobbies and have tried majoring in IT before, but now it was time to make good on my passions and get an Engineering degree.</p>
+            <p>Only in these recent years, I've come to realize how blind I was to how the physical world works and am now enlightened; I can see things I've never realized and can manipulate them for the better. One of my biggest leaps into enlightenment was the <u style="cursor:pointer;" ng-click="vm.showDialog($event, 'fourier.html')">Fourier Transform</u> and the power it possesses and seemingly endless applications. I could go on and on about the Fourier Transform as well as its close mathematical functions: the Laplace Transform and Z-Transform... but maybe for another time.</p>
+            <p>So here I am, about to finish my first undergraduate degree in Electrical Engineering!</p>
+            </md-content>
+        </md-tab>
+        <md-tab label="My Values">
+            <md-content class="md-padding">
+            <h3>My Values</h3>
+            <p>I come from a family of immigrants; both my mom and dad came from Mexico in search of their own American Dream. Now, my parents are business-owners in a trucking company with a current fleet size of two with a third incoming!</p>
+            <div layout-xs="column" layout="row" layout-align="center center">
+                <div flex-xs flex-gt-xs="40">
+                <md-card>
+                <img ng-src="truck1.jpg">
+                <md-card-content>
+                    The one that started it all.
+                </md-card-content>
+                 </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="40">
+                <md-card>
+                <img ng-src="truck2.jpg">
+                <md-card-content>
+                    The newest face of the fleet.
+                </md-card-content>
+                 </md-card>
+                </div>
+            </div>
+            <p>Taking from my parents, I believe in hard work and the value of a person's word; even without money, a person can have inexpressible value in both their commitment to their work, and the strength of their word.  Although we all may be looking for riches, I find an intangible wealth being a dependable person that you can count on and expect others close to me to carry themselves similarly.</p>
+            <p>I care deeply about all of those that are close to me, including my family, friends, and colleagues and will always try to help them just as they have helped me. The bonds that have been created throughout my years in college have become unbreakable and will be something I will never forget as we all split paths to follow our dreams.</p>
+            <div layout-xs="column" layout="row" layout-align="center center">
+                <div flex-xs flex-gt-xs="100">
+                    <md-card>
+                        <img ng-src="duck.jpg">
+                        <md-card-content>
+                            Celebrating a successful semester at the local brewery.
+                        </md-card-content>
+                    </md-card>
+                </div>
+            </div>
+            </md-content>
+        </md-tab>
+        <md-tab label="Music" ng-if="vm.showMusicTab">
+            <md-content class="md-padding">
+            <h3>Music</h3>
+            <p>Well aren't you quite the super-sleuth? You've managed to find a hidden tab!</p>
+            <p>In any case, I'm really big into music - so much that I like to make my own mixes.  Lately, it's been a trend of house music since it helps me focus.  Here are two of my more recent compilations:</p>
+            <div layout-xs="column" layout="row" layout-align="center center">
+                <div flex-xs flex-gt-xs="35">
+                <md-card>
+                    <img ng-src="612.jpg">
+                    <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbrayancastaneda52%2F612%2F" frameborder="0" ></iframe>
+                </md-card>
+                </div>
+                <div flex-xs flex-gt-xs="35">
+                    <md-card>
+                        <img ng-src="TuesdayMorning.jpg">
+                        <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbrayancastaneda52%2Ftuesday-morning-five-five-nights%2F" frameborder="0" ></iframe>
+                </md-card>
+                </div>
+            </div>
+        </md-content>
+        </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

@@ -1,0 +1,74 @@
+<md-content class="md-padding" layout-xs="column" layout="column" ng-cloak>
+    <div layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="65">
+        <md-card>
+            <iframe height="360" src="https://www.youtube.com/embed/03r56SdhQwA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <md-card-title>
+                <md-card-title-text>
+                <span class="md-headline">SLAM Drone using Image Processing</span>
+                <span class="md-subhead">Senior Design Project, August 2017 - May 2018</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-content flex layout-padding>
+                    <md-tabs md-dynamic-height md-border-bottom>
+                            <md-tab label="Introduction">
+                                <md-content class="md-padding">
+                                <h3>Introduction</h3>
+                                <p>As our senior design project, our group chose to go with using a SLAM algorithim and putting it onto a drone. From there, deep learning is implemented so that it may navigate with a sense of 'intuition' and make a best-case decision based on training data.
+                                <p>This project was the culmination of the education we have received throughout our time at California State University, Fresno and was presented for Fresno State Projects Day 2018 in May.</p>
+                                </md-content>
+                            </md-tab>
+                            <md-tab label="Synopsis">
+                                <md-content class="md-padding">
+                                <h3>Synopsis</h3>
+                                <p>Our group has been in the making for some time now - we all like drones, computers, and automation. We figured we can put a lot of these together by putting it all in a neat package that would integrate drones, navigation, and machine/deep learning. We want this project not to be too easy as to complete in a short amount of time but also not too hard that it's just not feasible. After attending to a <a style="color:white;" href="http://www.interdrone.com/" target="_blank">Drone Conference in Las Vegas</a> and watching presentation, we set our minds on creating something similar.</p>
+                                <p>Taking Jetson's supercomputing abilities and coupling them with Intel's RealSense, we would like to create a fully autonomous drone that can operate in given environment while mapping it's location at the same time. We'd like to start in 2D, using a ground-based rover and then add a dimension by using a flying drone.</p>
+                                <p>It's a year long project that wraps up our education as undergraduate students that goes further than just putting a couple of sensors together and calling it a day. It's a culmination of all of our skills, united to create something amazing.</p>
+                                </md-content>
+                            </md-tab>
+                             <md-tab label="Conclusion">
+                                <md-content class="md-padding">
+                                <h3>Conclusion</h3>
+                                <p>In the end, we did complete a working drone with automated take-off, hover, and landing.  Most of the issues were in stabalizing automated flight as it kept needing manual correction to sustain a decent hover.</p>
+                                <p>Image recognition worked great with a library of pre-trained models such as cars and persons.  Using the person model, a yaw control was implemented and tested while the drone was harnessed but was never tested with full flight for fear of instability and risk of damaging the drone beyond repair as there have been some close calls already.</p>
+                                <p>Check out the video above to see the results of our project.</p>
+                                </md-content>
+                            </md-tab>
+                            </md-tabs>     
+            </md-content>
+        </md-card>
+        </div>
+        <div flex-xs flex-gt-xs="35" layout="column">
+        <md-card>
+            <img ng-src="slam2.jpg">
+            <md-card-content>
+                Intel Aero Drone using the RealSense camera/sensor package.
+            </md-card-content>
+        </md-card>
+                    <md-card>
+                <img ng-src="slam1.png">
+                <md-card-content>
+                    Nvidia Jetson TX1 Development Board.  The GPU-enabled acceleration makes quick work of redundant processes, such as image processing.
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+    <div layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="50">
+            <md-card>
+                <img ng-src="https://j.gifs.com/wmpqq8.gif">
+                <md-card-content>
+                    Drone navigating through a forest trail using deep learning.
+                </md-card-content>
+            </md-card>
+        </div>
+        <div flex-xs flex-gt-xs="50">
+            <md-card>
+                <img ng-src="https://j.gifs.com/pQYjy6.gif">
+                <md-card-content>
+                    A graphic to show the biologically-inspired programming paradigm which enables a computer to learn from observational data.
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</md-content>

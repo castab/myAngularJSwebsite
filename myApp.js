@@ -16,7 +16,7 @@
             controllerAs : "vm"
         })
         .when("/slam", {
-            templateUrl : "tester.html"
+            templateUrl : "slam.html"
         })
         .when("/web", {
             templateUrl : "tester.html"
