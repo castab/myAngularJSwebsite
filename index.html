@@ -11,11 +11,11 @@
         <script src="/node_modules/angular-animate/angular-animate.js"></script> 
         <script src="/node_modules/angular-messages/angular-messages.js"></script> 
         <script src="/node_modules/angular-material/angular-material.js"></script>
-        <script src="/node_modules/lodash/lodash.js"></script>
+        <!-- <script src="/node_modules/lodash/lodash.js"></script> currently unused -->
         <script src="myApp.js"></script>
-        <script src="index.controller.js"></script>
-        <script src="sidenav.controller.js"></script>
-        <script src="dialog.controller.js"></script>
+        <script src="./app/home/js/index.controller.js"></script>
+        <script src="./app/navigation/sidenav.controller.js"></script>
+        <script src="./app/home/js/dialog.controller.js"></script>
     </head>
 
   <body ng-app="MyApp">
@@ -42,7 +42,7 @@
       
           <md-content ng-controller="LeftCtrl">
             <div layout-padding layout="column">
-              <md-card ng-click="go('/rbgleds'); toggleLeft()" style="cursor:pointer;">
+              <md-card ng-click="go('/rgbleds'); toggleLeft()" style="cursor:pointer;">
                   <md-card-actions layout="row" layout-align="space-between center">
                     Addressable High-Power RGBLEDs
                       <md-card-icon-actions>
@@ -95,7 +95,7 @@
                   SLAM Drone using Image Processing
                     <md-card-icon-actions>
                       <md-button class="md-icon-button" aria-label="Share">
-                        <img style="filter:invert(100%)" ng-src="droneSVG.svg">
+                        <img style="filter:invert(100%)" ng-src="app/navigation/media/droneSVG.svg">
                       </md-button>
                     </md-card-icon-actions>
                   </md-card-actions>

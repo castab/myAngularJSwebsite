@@ -11,15 +11,15 @@
     .config(function($routeProvider) {
         $routeProvider
         .when("/", {
-            templateUrl : "home.html",
+            templateUrl : "app/home/home.html",
             controller : "IndexController",
             controllerAs : "vm"
         })
         .when("/slam", {
-            templateUrl : "slam.html"
+            templateUrl : "app/slam/slam.html"
         })
         .when("/web", {
-            templateUrl : "tester.html"
+            templateUrl : "app/web/web.html"
         })
         .when("/rgbleds", {
             templateUrl : "tester.html"

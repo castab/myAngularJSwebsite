@@ -1,0 +1,27 @@
+<md-content class="md-padding" layout-xs="column" layout="row" ng-cloak>
+    <div flex-xs flex-gt-xs="40" layout="column">
+      <md-card>
+          <img ng-src="app/home/media/me.jpg">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Hi There!</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>Welcome to my website.  Here you'll find a little more in-depth information about me and my projects that aren't limited to a single-page resume.</p>
+          <p>On the left (mobile users use the icon on the top left to open the navigation bar), you'll find links to my past and current projects.</p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-primary md-raised" ng-click="vm.showPrerenderedDialog()">About Me</md-button>
+          </md-card-actions>
+      </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="60" layout="column">
+      <md-card>
+        <img ng-click="vm.showSimpleToast('Fresno State! Go Dogs!')" style="padding:10px" ng-src="app/home/media/fresnostatelcoe.png">
+      </md-card>
+      <md-card>
+        <img ng-click="vm.showSimpleToast('My hometown, Fresno')" ng-src="https://c1.staticflickr.com/1/198/466586933_9d6f104478_b.jpg">
+      </md-card>
+    </div>
+  </md-content>
