@@ -1,7 +1,7 @@
 (function () {
 
     angular
-    .module('MyApp', ['ngMaterial', 'ngMessages','ngRoute'])
+    .module('MyApp', ['ngMaterial', 'ngMessages','ngRoute', 'ngCookies'])
     .config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
@@ -19,7 +19,9 @@
             templateUrl : "app/slam/slam.html"
         })
         .when("/web", {
-            templateUrl : "app/web/web.html"
+            templateUrl : "app/web/web.html",
+            controller: "WebController",
+            controllerAs: "vm"
         })
         .when("/rgbleds", {
             templateUrl : "tester.html"

@@ -2,13 +2,37 @@
 
     var app = angular.module('MyApp');
 
-    app.controller("DialogController", ['$scope', '$mdDialog', '$timeout', function($scope, $mdDialog, $timeout){
+    app.controller("DialogController", ['$scope', '$mdDialog', '$timeout', '$cookies', function($scope, $mdDialog, $timeout, $cookies){
         
         console.log("Dialog Controller ---------");
         
         var vm = this;
         vm.selectedTabIndex = 0;
-        vm.showMusicTab = false;
+        
+        // Check cookies to check if user has already 'discoverd' the music tab
+        vm.musicTabCookie = $cookies.get('musicTabDiscovered');
+        console.log(vm.musicTabCookie);
+        if (vm.musicTabCookie) {
+            // Cookie is there
+            if (vm.musicTabCookie === 'true') {
+                vm.showMusicTab = true;
+            } else if (vm.musicTabCookie === 'false') {
+                vm.showMusicTab = false;
+            } else {
+                $cookies.put('musicTabDiscovered', false);
+                vm.showMusicTab = false;
+            }
+        } else {
+            // Cookie is not there
+            $cookies.put('musicTabDiscovered', false);
+            vm.showMusicTab = false;
+        }
+        
+        vm.setMusicTabDiscoveryCookie = function() {
+            $cookies.put('musicTabDiscovered', true);
+            vm.showMusicTab = true;
+        }
+
 
         vm.showDialog = function(ev, target) {
             $mdDialog.show({

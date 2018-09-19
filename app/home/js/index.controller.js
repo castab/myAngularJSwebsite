@@ -2,7 +2,7 @@
 
     var app = angular.module('MyApp');
 
-    app.controller("IndexController", ['$scope', '$http', '$mdToast', '$mdDialog', function($scope, $http, $mdToast, $mdDialog){
+    app.controller("IndexController", ['$scope', '$mdToast', '$mdDialog', function($scope, $mdToast, $mdDialog){
         
         console.log("Index Controller ---------");
         

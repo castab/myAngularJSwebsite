@@ -3,6 +3,9 @@
 <html>
     <head>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#303030" />
+        <!-- <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192"> icon for address bar -->
         <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="/node_modules/angular/angular.js"></script>
@@ -11,13 +14,15 @@
         <script src="/node_modules/angular-animate/angular-animate.js"></script> 
         <script src="/node_modules/angular-messages/angular-messages.js"></script> 
         <script src="/node_modules/angular-material/angular-material.js"></script>
-        <!-- <script src="/node_modules/lodash/lodash.js"></script> currently unused -->
+        <script src="/node_modules/angular-cookies/angular-cookies.js"></script>
+        <script src="/node_modules/lodash/lodash.js"></script>
         <script src="myApp.js"></script>
-        <script src="./app/home/js/index.controller.js"></script>
-        <script src="./app/navigation/sidenav.controller.js"></script>
-        <script src="./app/home/js/dialog.controller.js"></script>
+        <script src="app/home/js/index.controller.js"></script>
+        <script src="app/web/web.controller.js"></script>
+        <script src="app/navigation/sidenav.controller.js"></script>
+        <script src="app/home/js/dialog.controller.js"></script>
+        <script src="app/services/userlist.service.js"></script>
     </head>
-
   <body ng-app="MyApp">
     <div ng-controller="AppCtrl" layout="column" style="height:100%;">
       <section layout="row" flex>

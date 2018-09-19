@@ -1,19 +1,72 @@
+<style>
+md-list.scrollableList {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+</style>
+
 <md-content class="md-padding" layout-xs="column" layout="column" ng-cloak>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Front-End Development using Modern Frameworks</span>
+            </md-card-title-text>
+        </md-card-title>
+    </md-card>
     <div layout-xs="column" layout="row">
-        <div flex-xs flex-gt-xs="55">
-        <md-card>
-            <img ng-src="app/web/media/errorResp.jpg">
-        </md-card>
-        </div>
-        <div flex-xs flex-gt-xs="35">
+        
+        <div flex-xs flex-gt-xs="100">
             <md-card>
-                <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-headline">Under Construction</span>
-                    </md-card-title-text>
-                </md-card-title>
+                <md-tabs md-dynamic-height md-border-bottom md-selected="vm.selectedTabIndex">
+        <md-tab label="Demo">
+            <md-content class="md-padding">
+            <md-card-content layout-padding>
+            <md-content>
+                <p>I made a little demo showcasing some of the <i>newer</i> skills I gained over the past year or so.</p>
+                <p>Using a mix of AngularJS, PHP, and MySQL, I've created a dynamic page from which data is fetched from an SQL server and wrapped into a JSON payload by PHP and then shot here for display.</p>
+                <p>Try adding and removing some content to see it in action.</p>
+                <p ng-hide="vm.users.length > 0">It seems like you've removed all the entries.  Try adding some new ones or reload the page.</p>
+            </md-content>
+                <md-list ng-show="vm.users.length > 0" class="scrollableList" flex>
+                    <md-list-item class="md-3-line" ng-repeat="user in vm.users" ng-click="null">
+                        <img ng-src="app/home/media/me.jpg" class="md-avatar">
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{ user.username }}</h3>
+                            <h4>{{ user.subject }}</h4>
+                            <p>{{ user.message }}</p>
+                        </div>
+                        <md-button class="md-icon-button" aria-label="Delete" ng-click="vm.removeEntry(user)">
+                            <i class="material-icons">delete_forever</i>
+                        </md-button>
+                    </md-list-item>
+                </md-list>
+                <md-toolbar class="md-hue-2" layout-align="center center">
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <i class="material-icons">library_add</i>
+                        </md-button>
+                </md-toolbar>
+        </md-card-content>
+            </md-content>
+        </md-tab>
+        <md-tab label="Previous Experience">
+            <md-content class="md-padding">
+            <md-card-content layout-padding>
+            <md-content>
+                <p>During my internship at Target, I picked up a lot of the skills used on this website now!  A big part of it was AngularJS and the use of modules, controllers, services, and how they can manipulate to the DOM.</p>
+                <p>Before picking up AngularJS, I used a combination of vanilla Javascript and W3's CSS framework (W3CSS) that made up the old version of this website.  You can visit it <a href="./old" style="color:white;">here</a> but keep in mind that it is outdated and buggy.</p>
+            </md-content>
+        </md-card-content>
+            </md-content>
+        </md-tab>
+        </md-tabs>
+            </md-card>
+        </div>
+    </div>
+    <div layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="65">
+            <md-card>
+                <img ng-src="app/web/media/errorResp.jpg">
                 <md-content flex layout-padding>
-                    <p>I'm working on getting some simple API-like functions for this website before I write about it</p>
                     <p>Did you know there actually is a (418) "I'm a teapot" response?  Yeah, it exists!</p>
                 </md-content>
             </md-card>
