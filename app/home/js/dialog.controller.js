@@ -11,14 +11,14 @@
         
         // Check cookies to check if user has already 'discoverd' the music tab
         vm.musicTabCookie = $cookies.get('musicTabDiscovered');
-        console.log(vm.musicTabCookie);
         if (vm.musicTabCookie) {
-            // Cookie is there
+            // Cookie is there, check if true or false
             if (vm.musicTabCookie === 'true') {
                 vm.showMusicTab = true;
             } else if (vm.musicTabCookie === 'false') {
                 vm.showMusicTab = false;
             } else {
+                // Otherwise, set it
                 $cookies.put('musicTabDiscovered', false);
                 vm.showMusicTab = false;
             }

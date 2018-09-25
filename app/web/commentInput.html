@@ -1,0 +1,74 @@
+<div class="md-dialog-container" layout-padding ng-cloak>
+<md-dialog flex-gt-sm="35" layout-padding>
+<md-content>
+      <form name="commentForm" layout="column" layout-xs="column" novalidate>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+              <span class="md-headline">Add New Content</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+      <small layout="row" layout-align="center"><i>All fields required.</i></small>
+      <div layout="row">
+        <i style="padding-top:24px" class="material-icons">account_circle</i>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Name</label>
+          <input name="nameInput" ng-model="vm.user.username" required md-maxlength="20" ng-pattern="/^[a-zA-Z\s]+$/">
+          <div ng-messages="commentForm.nameInput.$error">
+            <div ng-message="required">This entry is required.</div>
+            <div ng-message="md-maxlength">Your entry is too long.</div>
+            <div ng-message="pattern">Your entry contains invalid characters.</div>
+          </div>
+        </md-input-container>
+      </div>
+      <div layout="row">
+        <i style="padding-top:24px" class="material-icons">subject</i>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Subject</label>
+          <input name="subjectInput" ng-model="vm.user.subject" required md-maxlength="20">
+          <div ng-messages="commentForm.subjectInput.$error">
+            <div ng-message="required">This entry is required.</div>
+            <div ng-message="md-maxlength">Your entry is too long.</div>
+          </div>
+        </md-input-container>
+      </div>
+      <div layout="row">
+        <i style="padding-top:24px" class="material-icons">description</i>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Comment</label>
+          <textarea name="commentInput" ng-model="vm.user.message" required md-maxlength="50" rows="1"></textarea>
+          <div ng-messages="commentForm.commentInput.$error">
+            <div ng-message="required">This entry is required.</div>
+            <div ng-message="md-maxlength">Your entry is too long.</div>
+          </div>
+        </md-input-container>
+      </div>
+      <div layout="row" layout="start center">
+        <i ng-init="showNotice=true;" ng-click="showNotice=!showNotice;" style="cursor:pointer;" class="material-icons">error_outline</i>
+        <small ng-hide="showNotice;">  
+        HostGator lacks a particular toolset <a style="color:white;" target="_blank" href="http://php.net/manual/en/intro.mysqlnd.php">(MySQL Native Driver)</a> in this server instance.  Consequently, it's much more difficult to write prepared MySQL statements.  For now, new entries will persist locally as cookies in your browser.
+        </small>
+      </div>
+      
+      <div layout="row" layout-align="center center">
+        <div class="animate-switch-container" ng-switch on="vm.switch">
+          <div class="animate-switch" ng-switch-when="true">
+            <md-button ng-hide="!vm.isInputValid(commentForm.$valid)" ng-click="vm.addContent(commentForm.$valid)"  class="md-icon-button">
+            <i class="material-icons">done</i>
+        </md-button>
+          </div>
+          <div class="animate-switch" ng-switch-when="false">
+            <md-button ng-show="!vm.isInputValid(commentForm.$valid)" ng-disabled="true"  class="md-icon-button">
+            <i class="material-icons md-inactive">done</i>
+        </md-button>
+          </div>
+        </div>
+        <md-button ng-click="vm.cancelInput()" class="md-icon-button">
+            <i class="material-icons">clear</i>
+        </md-button>
+      </div>
+      </form>
+    </md-content>
+</md-dialog>
+</div>

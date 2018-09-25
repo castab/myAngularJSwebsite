@@ -22,14 +22,17 @@ md-list.scrollableList {
             <md-content class="md-padding">
             <md-card-content layout-padding>
             <md-content>
-                <p>I made a little demo showcasing some of the <i>newer</i> skills I gained over the past year or so.</p>
+                <p>I made a small demo showcasing some of the <i>newer</i> skills I gained over the past year or so.</p>
                 <p>Using a mix of AngularJS, PHP, and MySQL, I've created a dynamic page from which data is fetched from an SQL server and wrapped into a JSON payload by PHP and then shot here for display.</p>
                 <p>Try adding and removing some content to see it in action.</p>
-                <p ng-hide="vm.users.length > 0">It seems like you've removed all the entries.  Try adding some new ones or reload the page.</p>
             </md-content>
+                <md-divider></md-divider>
+                <div layout="row" layout-align="center center" ng-show="vm.users.length == 0">
+                    <p>It seems like you've removed all the entries.  Try adding some new ones or reload the page.</p>
+                </div>
                 <md-list ng-show="vm.users.length > 0" class="scrollableList" flex>
                     <md-list-item class="md-3-line" ng-repeat="user in vm.users" ng-click="null">
-                        <img ng-src="app/home/media/me.jpg" class="md-avatar">
+                        <img ng-src="{{ user.image }}" class="md-avatar">
                         <div class="md-list-item-text" layout="column">
                             <h3>{{ user.username }}</h3>
                             <h4>{{ user.subject }}</h4>
@@ -40,11 +43,13 @@ md-list.scrollableList {
                         </md-button>
                     </md-list-item>
                 </md-list>
-                <md-toolbar class="md-hue-2" layout-align="center center">
-                        <md-button class="md-icon-button" aria-label="Share">
-                            <i class="material-icons">library_add</i>
-                        </md-button>
-                </md-toolbar>
+                <md-divider></md-divider>
+                <div layout="row" layout-align="center center" ng-click="vm.showDialog($event, 'app/web/commentInput.html')">
+                    <md-button class="md-icon-button">
+                        <i class="material-icons">library_add</i>
+                    </md-button>
+                    <p style="cursor:pointer">Add Content</p>
+                </div>
         </md-card-content>
             </md-content>
         </md-tab>
