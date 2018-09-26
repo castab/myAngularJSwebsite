@@ -29,11 +29,11 @@
         .when("/iot", {
             templateUrl : "tester.html"
         })
-        .when("/clms", {
-            templateUrl : "tester.html"
+        .when("/clmc", {
+            templateUrl : "app/clmc/clmc.html"
         })
         .when("/wildwest", {
-            templateUrl : "tester.html"
+            templateUrl : "app/wildwest/wildwest.html"
         })
         .when("/bluetooth", {
             templateUrl : "tester.html"

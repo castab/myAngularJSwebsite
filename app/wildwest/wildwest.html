@@ -1,0 +1,58 @@
+<style>
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+</style>
+
+<md-content class="md-padding" layout-xs="column" layout="column" ng-cloak>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Wild West Shootout Game</span>
+            </md-card-title-text>
+        </md-card-title>
+    </md-card>
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Wild West">
+            <md-content>
+                <div layout-xs="column" layout-sm="column" layout-gt-sm="row">
+                    <md-card flex-gt-sm="40">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/QqMgE-rRKb4?start=296" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </md-card>
+                    <div layout="column" flex-gt-sm="60">
+                        <p>Back in Spring of 2015, a group of 2 colleagues and I were tasked to make a project out of a PIC microcontroller.  At the time, addressable LEDs where relatively new along with the ESP8266 WiFi-enabled microcontroller.  We thought amongst ourselves and decided, why not make a game out of this?  It took a while to do all of this and I'm more than glad that I paired up with Adam and Nick - we all carried the same passion for this project.</p>
+                        <p>After a some hundreds of lines of code in assembly (our 56 page report was roughly 44 pages of code), we successfully demonstrated a fun game in which two players would "face off" and whoever "shot" first would win.</p>
+                    </div>
+                </div>
+                <div layout="column" layout-gt-sm="row" layout-align="start end" layout-padding>
+                    <md-card flex-gt-sm="33">
+                        <img class="md-card-image" src="https://www.microchip.com/_ImagedCopy/DM163022-1.jpg">
+                        <p>The PICDEM2 Development Kit.</p>
+                    </md-card>
+                    <md-card flex-gt-sm="33">
+                        <img class="md-card-image" src="https://iot-playground.com/images/articles/a7/ESP8266_Wi-Fi.jpg">
+                        <p>An ESP8266 Microcontroller on top of a quarter for size comparison.</p>
+                    </md-card>
+                    <md-card flex-gt-sm>
+                        <img class="md-card-image" src="https://cdn-shop.adafruit.com/1200x900/2561-00.jpg">
+                        <p>An LED strip similar to the one used for our project.</p>
+                    </md-card>
+                </div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</md-content>
