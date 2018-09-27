@@ -1,2 +1,5 @@
 
 .vscode/settings.json
+node_modules/angular-super-gallery/demo/*
+node_modules/angular-super-gallery/screenshot2.jpg
+node_modules/angular-super-gallery/screenshot1.jpg
