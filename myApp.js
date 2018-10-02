@@ -1,7 +1,7 @@
 (function () {
 
     angular
-    .module('MyApp', ['ngMaterial', 'ngMessages','ngRoute', 'ngCookies', 'ngMessages', 'ngAnimate', 'ngTouch', 'angularSuperGallery'])
+    .module('MyApp', ['ngMaterial', 'ngMessages','ngRoute', 'ngCookies', 'ngMessages', 'ngAnimate'])
     .config(function($mdThemingProvider) {
         $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
