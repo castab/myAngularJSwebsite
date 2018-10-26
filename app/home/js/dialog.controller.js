@@ -41,7 +41,7 @@
                 targetEvent: ev,
                 clickOutsideToClose: true,
                 multiple: true,
-                controller: () => this,
+                controller: function() { return vm; },
                 controllerAs: 'vm'
             });
         };

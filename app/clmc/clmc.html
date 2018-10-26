@@ -1,1 +1,119 @@
-<p>This one's next</p>
+<md-content class="md-padding" layout-xs="column" layout="column" ng-cloak>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Call Log Management Center using PHP/MySQL</span>
+            </md-card-title-text>
+        </md-card-title>
+    </md-card>
+    <div class="md-padding" layout-xs="column" layout="row">
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Why?</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+                <p>I had always wanted to build my own website but never really had much reason to until I was approached by a local business to fix a slow database based off of Microsoft Access. In response to their slow database, I opted to build a new database using that would use SQL on the back-end and be presented to the user as a webpage. The advantage of this is that the users no longer had to use a specific computer and were able to enter and view data using any computer on the local intranet, and if desired, from the internet. From this, I ended up picking PHP, SQL, and some CSS to add to my repertoire.</p>
+        </md-card-content>
+        </md-card>
+        </div>
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">PHP and SQL</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+                <p>Data manipulation was made possible with the persistance that PHP can carry across browser windows during a user's session. Without PHP, I wouldn't have been able to implement a strong input validation system. A strong input validation system is necessary because the entries must go in correctly so that they may be sorted and displayed correctly. Another important factor was the elimination of SQL injection. Input validation was the most difficult part of the design, but proved well because it ensured a correct entry and a way for users to correct their inputs.</p>
+                <p>The combination of PHP and SQL made it possible to implement a strong user/password login system so that entries may be logged by user as well. With PHP's built in hashing functions, a user's hashed password can be securely stored on the database without exposing the password itself and used again to verify a match for future logins.</p>
+        </md-card-content>
+        </md-card>
+        </div>
+    </div>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Gallery</span>
+            </md-card-title-text>
+        </md-card-title>
+    </md-card>
+    <div class="md-padding" layout-xs="column" layout="row">
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+            <img src="app/clmc/media/pic1.JPG">
+        <md-card-content>
+            Login landing
+        </md-card-content>
+        </md-card>
+        </div>
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+            <img src="app/clmc/media/pic2.JPG">
+        <md-card-content>
+            What's my password again?
+        </md-card-content>
+        </md-card>
+        </div>
+    </div>
+    <div class="md-padding" layout-xs="column" layout="row">
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+            <img src="app/clmc/media/pic3.JPG">
+        <md-card-content>
+            After logging in, the menu privileges change to be able to make/view entires.
+        </md-card-content>
+        </md-card>
+        </div>
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+            <img src="app/clmc/media/pic4.JPG">
+        <md-card-content>
+            A table view of recent entries. Clicking on an entry's date takes you to an edit form for that entry.
+        </md-card-content>
+        </md-card>
+        </div>
+    </div>
+    <div class="md-padding" layout-xs="column" layout="row">
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+            <img src="app/clmc/media/pic5.JPG">
+        <md-card-content>
+            The edit form.
+        </md-card-content>
+        </md-card>
+        </div>
+        <div class="flex-50 flex-xs-100">
+        <md-card>
+            <img src="app/clmc/media/pic6.JPG">
+        <md-card-content>
+            HTML5 helps out with some form validation but the input is still verified closer to the back-end just in case someone is still using IE6 or something.
+        </md-card-content>
+        </md-card>
+        </div>
+    </div>
+    <div class="md-padding" layout-xs="column" layout="row">
+        <div class="flex-100">
+        <md-card>
+            <img src="app/clmc/media/pic7.JPG">
+        <md-card-content>
+            A peek into the code.  Over security concern, this code for this project will not be published on GitHub since the project is in production.  Although, I'm completely open to talking about it in person!
+        </md-card-content>
+        </md-card>
+        </div>
+    </div>
+    <div class="flex-100">
+        <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Hindsight</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+                <p>This particular application was written entirely in HTML, CSS, and PHP.  Looking back, the project was much more difficult then I first thought, only because all of my checks, verifications, and data reads/writes were happening strictly server-side and then sent to the client.  <a href="#!/web" style="color:white;">A modern framework</a> would've easily taken many hours off this project!</p>
+        </md-card-content>
+        </md-card>
+        </div>
+</md-content>

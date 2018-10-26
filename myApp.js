@@ -24,7 +24,7 @@
             controllerAs: "vm"
         })
         .when("/rgbleds", {
-            templateUrl : "tester.html"
+            templateUrl : "app/rgbleds/rgbleds.html"
         })
         .when("/iot", {
             templateUrl : "tester.html"
@@ -36,7 +36,7 @@
             templateUrl : "app/wildwest/wildwest.html"
         })
         .when("/bluetooth", {
-            templateUrl : "tester.html"
+            templateUrl : "app/bluetooth/bluetooth.html"
         });
     })
 

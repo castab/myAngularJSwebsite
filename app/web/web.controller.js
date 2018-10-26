@@ -41,7 +41,7 @@
                     vm.users.push(_.cloneDeep(user));
                 });
             }
-        })
+        });
 
 
         // Prepare capture form input
@@ -77,7 +77,7 @@
                 targetEvent: ev,
                 clickOutsideToClose: true,
                 multiple: false,
-                controller: () => this,
+                controller: function() { return vm;},
                 controllerAs: 'vm'
             });
         };

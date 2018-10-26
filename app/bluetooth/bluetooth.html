@@ -1,0 +1,88 @@
+<md-content class="md-padding" layout-xs="column" layout="column" ng-cloak>
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">DC-Isolated Bluetooth Audio Adapter</span>
+                </md-card-title-text>
+            </md-card-title>
+        </md-card>
+        <div class="md-padding" layout-xs="column" layout="row">
+            <div class="flex-100 flex-xs-100">
+            <md-card>
+                <div layout="row">
+                    <md-card class="flex-50">
+                        <img src="https://img.dxcdn.com/productimages/sku_390657_1.jpg">
+                    </md-card>
+                    <md-card class="flex-50">
+                        <img src="https://www.picclickimg.com/d/l400/pict/332429150263_/CSR8630-KRC-86B-Bluetooth-40-Wireless-35mm-Audio-Stereo.jpg">
+                    </md-card>
+                </div>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Bluetooth Upgrades</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                    <p>This project came about when I decided to install a Bluetooth module into my car. After using an auxiliary audio cord for so long, I wanted to make the jump to the convenience of Bluetooth. I particularly enjoyed using my current head-unit as it offered great sound and very reasonable power, so I didn't want to swap it out since the only extra feature I wanted was wireless audio.</p>
+            </md-card-content>
+            </md-card>
+            </div>
+        </div>
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Gallery</span>
+                </md-card-title-text>
+            </md-card-title>
+        </md-card>
+        <div class="md-padding" layout-xs="column" layout="row">
+            <div class="flex-50 flex-xs-100">
+            <md-card>
+                <img src="app/bluetooth/media/pic1.JPG">
+            <md-card-content>
+                Prototype
+            </md-card-content>
+            </md-card>
+            </div>
+            <div class="flex-50 flex-xs-100">
+            <md-card>
+                <img src="app/bluetooth/media/pic4.JPG">
+            <md-card-content>
+                Looks like this one gave off some magic smoke...
+            </md-card-content>
+            </md-card>
+            </div>
+        </div>
+        <div class="md-padding" layout-xs="column" layout="row">
+            <div class="flex-50 flex-xs-100">
+            <md-card>
+                <img src="app/bluetooth/media/pic3.JPG">
+            <md-card-content>
+                Evolution into a Relay/Battery System
+            </md-card-content>
+            </md-card>
+            </div>
+            <div class="flex-50 flex-xs-100">
+            <md-card>
+                <img src="app/bluetooth/media/pic2.JPG">
+            <md-card-content>
+                Complete with a 4-chanel relay for future additions.
+            </md-card-content>
+            </md-card>
+            </div>
+        </div>
+        <div class="flex-50 flex-xs-100">
+            <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Results</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                    <p>After installing the Bluetooth adapter and powering it with the car's 12v power, there was an audible hum whenever it was used. Using a volt-meter, I found some stray voltage between audio ground and the 12v supply ground: A classic ground-loop. I tried to alleviate the ground-loop that was present in the system by using audio isolators (AKA, some mini-transformers) but was not happy with the result because the audio reaching the head-unit was noticeably muted. It sounded like the music was being played over a low-quality stream.</p>
+                    <p>Unsatisfied with both approaches, I integrated a relay system that would disconnect the bluetooth adapter from the car's 12v power when the car is turned on and switch over to it's own battery supply. This isolation lets the Bluetooth module exchange the audio signal without the worry of a ground-loop or the use of audio isolators.</p>
+                    <p>When the keys are in the off position, the relay system switches back over to connect the car's 12v power so that a charge controller recharges the lithium battery pack. This method also gave me a way to turn the module on/off with the car so that it connects/disconnects from my phone when appropriate.</p>
+            </md-card-content>
+            </md-card>
+            </div>
+    </md-content>
