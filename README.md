@@ -1,2 +1,2 @@
 # My Personal AngularJS Website
-View the latest commit [here](https://www.supernet.tech).
+View the latest commit in action [here](https://www.supernet.tech).
