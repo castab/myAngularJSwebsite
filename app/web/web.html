@@ -4,7 +4,6 @@ md-content.scrollableList {
     overflow-y: auto;
 }
 </style>
-
 <md-content class="md-padding" layout-xs="column" layout="column" ng-cloak>
     <md-card>
         <md-card-title>
@@ -21,7 +20,7 @@ md-content.scrollableList {
                     <md-tab label="History">
                         <md-content class="md-padding scrollableList">
                             <h3>The Beginnings</h3>
-                            <p>My very first experience with any kind of web development came from tinkering around with the <a style="color:white;" href="https://www.sparkfun.com/products/13678" target="_blank">ESP8266 WiFi-enabled microcontroller</a>.  Before I knew what APIs were (much less, make an API), my default interface with the microcontroller was a very simple website that included a simple dialog and a drop-down box that would turn one of its IO pins HIGH or LOW; triggering an attached relay.</p>
+                            <p>My very first experience with any kind of web development came from tinkering around with the <a href="https://www.sparkfun.com/products/13678" target="_blank">ESP8266 WiFi-enabled microcontroller</a>.  Before I knew what APIs were (much less, write an API), my default interface with the microcontroller was a very simple website that included a simple dialog and a drop-down box that would turn one of its IO pins HIGH or LOW; triggering an attached relay.</p>
                             <p>Fast-forwarding to a crazy summer, I stumbled upon Lynda.com and found a beginner's course on PHP!  By the end of the summer, I was enthralled with what could be done with a little bit of server-side processing and some persistant storage such as SQL.</p>
                             <p>Over time, I picked up a good chunk of HTML and CSS, but I would have to say that my biggest leap was my internship with Target.  Throughout my internship, I picked up AngularJS and I couldn't believe how far behind I was with respect to data/session binding.  To drive this further, AngularJS isn't even one of the most recent frameworks!</p>
                         </md-content>
@@ -61,12 +60,42 @@ md-content.scrollableList {
         </md-card-content>
             </md-content>
         </md-tab>
+        <md-tab label="Student of the Web">
+            <md-content class="md-padding">
+            <md-card-content layout-padding>
+            <md-content>
+                <p>I've always wondered how some websites just make their websites look <i>just so <b>outstandingly</b> good!</i>  All I needed was a little push to see that it really is some heavy CSS'ing with JavaScript handling the reigns.</p>
+                <p>Aside from this website, you can check out some of my other work:</p>
+                <div layout="row" layout-xs="column" layout-align="center center">
+                    <div flex-xs="50" flex-sm="50" flex-md="50" flex="25">
+                        <md-card>
+                            <md-card-content>
+                                <p>A test website that I created with so that I could learn how to get some fluid animations going.  You can view it <a href="https://www.supernet.tech/new/" target="_blank">here</a>.</p>
+                                <p>GitHub Repository: <a href="https://www.github.com/castab/newWebsite" target="_blank">here</a>.</p>
+                            </md-card-content>
+                            <img src="app/web/media/pic1.jpg">
+                        </md-card>
+                    </div>
+                    <div flex-xs="50" flex-sm="50" flex-md="50" flex="25">
+                        <md-card>
+                            <md-card-content>
+                                <p>A website that I'm working on for my Dad's trucking business using Bootstrap 4 with AngularJS to drive the reviews 'api' wrapper that I wrote in PHP.  You can view it <a href="https://www.supernet.tech/veynas" target="_blank">here</a>.</p>
+                                <p>GitHub Repository: <a href="https://www.github.com/castab/veynasWebsite" target="_blank">here</a>.</p>
+                            </md-card-content>
+                            <img src="app/web/media/pic2.jpg">
+                        </md-card>
+                    </div>
+                </div>
+            </md-content>
+        </md-card-content>
+            </md-content>
+        </md-tab>
         <md-tab label="Previous Experience">
             <md-content class="md-padding">
             <md-card-content layout-padding>
             <md-content>
                 <p>During my internship at Target, I picked up a lot of the skills used on this website now!  A big part of it was AngularJS and the use of modules, controllers, services, and how they can manipulate to the DOM.</p>
-                <p>Before picking up AngularJS, I used a combination of vanilla Javascript and W3's CSS framework (W3CSS) that made up the old version of this website.  You can visit it <a href="./old" style="color:white;">here</a> but keep in mind that it is outdated and buggy.</p>
+                <p>Before picking up AngularJS, I used a combination of vanilla Javascript and W3's CSS framework (W3CSS) that made up the old version of this website.  You can visit it <a href="./old" >here</a> but keep in mind that it is outdated and buggy.</p>
             </md-content>
         </md-card-content>
             </md-content>
